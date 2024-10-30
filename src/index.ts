@@ -14,7 +14,7 @@ import createServer from "./server";
 
   const server = createServer();
   const { url } = await startStandaloneServer(server, {
-    listen: { port: 3000 },
+    listen: { port: +config.app.port },
     context: async () => {
       return {};
     },
